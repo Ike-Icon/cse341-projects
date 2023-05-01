@@ -1,10 +1,10 @@
-GET http://localhost:3000/contacts
+GET http://localhost:8080/contacts
 
 ###
-GET http://localhost:3000/contacts/644be5891b7b907706c95f25
+GET http://localhost:8080/contacts/644be5891b7b907706c95f25
 
 ###
-GET http://localhost:3000/contacts/644be5891b7b907706c95f26
+GET http://localhost:8080/contacts/644be5891b7b907706c95f26
 
 ###
-GET http://localhost:3000/contacts/644be5891b7b907706c95f27
+GET http://localhost:8080/contacts/644be5891b7b907706c95f27

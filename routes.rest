@@ -1,6 +1,7 @@
+// localhost
 GET http://localhost:8080/contacts
 
-###
+### 
 GET http://localhost:8080/contacts/644be5891b7b907706c95f25
 
 ###
@@ -8,3 +9,46 @@ GET http://localhost:8080/contacts/644be5891b7b907706c95f26
 
 ###
 GET http://localhost:8080/contacts/644be5891b7b907706c95f27
+
+### Creat contact
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Jonas",
+    "lastName":"Cooper",
+    "email":"jcooper@render.com",
+    "favoriteColor":"Red",
+    "birthday":"06-19-2000"
+}
+
+### Put contact
+PUT http://localhost:8080/contacts/644be5891b7b907706c95f26 HTTP/1.1
+content-type: application/json
+
+{
+   
+"firstName":"Jane",
+"lastName":"Smith",
+"email":"janesmith@example.com",
+"favoriteColor":"green",
+"birthday":"1995-05-10"
+}
+
+### DELETE contact
+DELETE http://localhost:8080/contacts/645671ffd3d71199cc959c76 HTTP/1.1
+
+
+
+//Render Deploy
+###
+GET https://cse341-projects-oalm.onrender.com/contacts
+
+### 
+GET https://cse341-projects-oalm.onrender.com/contacts/644be5891b7b907706c95f26
+
+###
+GET https://cse341-projects-oalm.onrender.com/contacts/644be5891b7b907706c95f26
+
+###
+GET https://cse341-projects-oalm.onrender.com/contacts/644be5891b7b907706c95f27

@@ -9,11 +9,12 @@ POST http://localhost:8080/contacts HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Jonas",
-    "lastName":"Cooper",
+    "firstName":"John",
+    "lastName":"Cole",
     "email":"jcooper@render.com",
     "favoriteColor":"Red",
     "birthday":"06-19-2000"
+
 }
 
 ### Put contact
@@ -25,12 +26,12 @@ content-type: application/json
 "firstName":"Jane",
 "lastName":"Smith",
 "email":"janesmith@example.com",
-"favoriteColor":"green",
+"favoriteColor":"red",
 "birthday":"1995-05-10"
 }
 
 ### DELETE contact
-DELETE http://localhost:8080/contacts/645671ffd3d71199cc959c76 HTTP/1.1
+DELETE http://localhost:8080/contacts/6456d715f66e2de14e1e34c3 HTTP/1.1
 
 
 

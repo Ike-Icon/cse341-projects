@@ -4,7 +4,6 @@ const mongodb = require('./db/connect');
 const app = express();
 const port = process.env.PORT || 8080;
 
-
 app
   .use(bodyParser.json())
   .use((req, res, next) => {
@@ -21,9 +20,11 @@ app
 
 mongodb.initDb((err) => {
   if (err) {
-    console.log(err);
-  }else {
-    app.listen(port);
-    console.log(`Connected to DB and listening on ${port}`);
+    console.error(err);
+    process.exit(1); // Exit the process with a non-zero status code to indicate an error
+  } else {
+    app.listen(port, () => {
+      console.log(`Connected to DB and listening on ${port}`);
+    });
   }
 });

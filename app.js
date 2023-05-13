@@ -21,7 +21,7 @@ app
 mongodb.initDb((err) => {
   if (err) {
     console.error(err);
-    process.exit(1); // Exit the process with a non-zero status code to indicate an error
+    process.exit(1); 
   } else {
     app.listen(port, () => {
       console.log(`Connected to DB and listening on ${port}`);

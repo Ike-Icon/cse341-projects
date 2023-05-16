@@ -3,17 +3,19 @@ const swaggerAutogen = require('swagger-autogen')();
 const doc = {
   info: {
     title: 'My API',
-    description: 'Contacts API',
-    version: '1.0.0' // Add a version number
+    description: 'Contact API'
   },
   host: 'cse341-projects-oalm.onrender.com',
   schemes: ['https']
 };
 
 const outputFile = './swagger.json';
-const endpointFiles = ['./routes/index.js']; // Use an array of endpoint files if you have multiple files
+const endpointsFiles = ['./routes/index.js'];
 
-swaggerAutogen(outputFile, endpointFiles, doc).then(() => {
-  // Import and start your server here
-  require('./app');
+// generate swagger.json
+swaggerAutogen(outputFile, endpointsFiles, doc);
+
+// Run server after it gets generated
+swaggerAutogen(outputFile, endpointsFiles, doc).then(async () => {
+  await import('./app.js');
 });
